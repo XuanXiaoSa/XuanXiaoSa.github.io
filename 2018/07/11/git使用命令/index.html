@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xuan xiao">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="git的使用将远程项目克隆到本地 git clone git@202.107.200.26:xuanxiao/myOnehome.git cd myOnehome                       // 进入该项目 git branch                         // 查看当前的分支   默认是master分支 git fetch origin develop:de">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git使用命令">
+<meta property="og:url" content="http://yoursite.com/2018/07/11/git使用命令/index.html">
 <meta property="og:site_name" content="Xuan xiao">
+<meta property="og:description" content="git的使用将远程项目克隆到本地 git clone git@202.107.200.26:xuanxiao/myOnehome.git cd myOnehome                       // 进入该项目 git branch                         // 查看当前的分支   默认是master分支 git fetch origin develop:de">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-11T05:41:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xuan xiao">
+<meta name="twitter:title" content="git使用命令">
+<meta name="twitter:description" content="git的使用将远程项目克隆到本地 git clone git@202.107.200.26:xuanxiao/myOnehome.git cd myOnehome                       // 进入该项目 git branch                         // 查看当前的分支   默认是master分支 git fetch origin develop:de">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/11/git使用命令/"/>
 
 
 
 
 
-  <title>Xuan xiao</title>
+  <title>git使用命令 | Xuan xiao</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/11/git使用命令/" itemprop="url">git使用命令</a></h1>
+          <h1 class="post-title" itemprop="name headline">git使用命令</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <h3 id="git的使用"><a href="#git的使用" class="headerlink" title="git的使用"></a>git的使用</h3><h4 id="将远程项目克隆到本地"><a href="#将远程项目克隆到本地" class="headerlink" title="将远程项目克隆到本地"></a>将远程项目克隆到本地</h4><ul>
+        <h3 id="git的使用"><a href="#git的使用" class="headerlink" title="git的使用"></a>git的使用</h3><h4 id="将远程项目克隆到本地"><a href="#将远程项目克隆到本地" class="headerlink" title="将远程项目克隆到本地"></a>将远程项目克隆到本地</h4><ul>
 <li>git clone <a href="mailto:git@202.107.200.26" target="_blank" rel="noopener">git@202.107.200.26</a>:xuanxiao/myOnehome.git</li>
 <li>cd myOnehome                       // 进入该项目</li>
 <li>git branch                         // 查看当前的分支   默认是master分支</li>
@@ -340,8 +339,6 @@
 </ul>
 <h4 id="git使用分支的工作流程和规范"><a href="#git使用分支的工作流程和规范" class="headerlink" title="git使用分支的工作流程和规范"></a>git使用分支的工作流程和规范</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">目前公司项目使用的是 - release分支 作为上线发布分支</span><br><span class="line">                 - master分支  作为开发合并分支</span><br><span class="line"></span><br><span class="line">我们的开发流程：</span><br><span class="line"></span><br><span class="line">- 开发新功能</span><br><span class="line">    + 从master 切出一个新分支 feature-2.1</span><br><span class="line">    + 在feature-2.1该分支上面开发，功能开发完成，测试都在这个上面，开发完成之后合并到master分支上面</span><br><span class="line">    + 同一块功能在同一个分支上开发，前后端都是如此</span><br><span class="line">    + 可以开发完成之后合并到master然后上传到gitlab之后合并到release分支上面，打一个tag然后上线</span><br><span class="line"></span><br><span class="line">- 修复线上紧急bug</span><br><span class="line">    + 直接从release切出一个分支，做为修复紧急bug的分支  hotfix2.0.1</span><br><span class="line">    + 直接修复，测试，然后直接上线合并到release分支上面，这个地方的代码需要同步到master分支上面，不然线上代码存在的bug依然存在master分支上面</span><br><span class="line"></span><br><span class="line">- 对于线上的分支问题的管理</span><br><span class="line">    + 一切分支如果只是一个人在开发，只需要在线下开发完成就可以了，可以不上传到gitlab，但是多个人在开发就需要上传到gitlab，以方便其他人下拉代码进行开发</span><br><span class="line">    + 等待功能完全开发测试结束，将该分支合并到master分支上面，将原来的分支删除就可以了</span><br><span class="line">    + 切换或者新建分支，直接在本地进行，不用在远程gitlab上面操作然后在拉下来</span><br><span class="line">    + 不在一起上线的问题，都新建一个分支来进行开发</span><br><span class="line">- 备注</span><br><span class="line">    + 所有上传分支的时候都要先下拉拉取代码（上传的时候一定要看清分支）</span><br><span class="line">    + 第一次克隆代码的时候默认是master分支，如果需要切换拉取其他分支，请使用上面的命令如：git fetch origin develop:develop</span><br><span class="line">    + 切记要修复线上紧急bug的分支合并到release的时候记得合并到master上</span><br><span class="line"></span><br><span class="line">- 对于web前端一个分支进行开发之后怎么进行测试，怎么上传到线下测试环境，又怎么上传到线上测试环境？</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -358,194 +355,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/11/使用hexo和github搭建属于自己的博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xuan xiao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xuan xiao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/11/使用hexo和github搭建属于自己的博客/" itemprop="url">使用hexo和github搭建属于自己的博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-11T13:15:30+08:00">
-                2018-07-11
-              </time>
+              <a href="/2018/07/11/使用hexo和github搭建属于自己的博客/" rel="next" title="使用hexo和github搭建属于自己的博客">
+                <i class="fa fa-chevron-left"></i> 使用hexo和github搭建属于自己的博客
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="博客搭建过程"><a href="#博客搭建过程" class="headerlink" title="博客搭建过程"></a>博客搭建过程</h2><blockquote>
-<p>前段时间一直忙于项目，整天加班，鉴于最近闲下来了，就开始构思搭建自己的博客了，目的主要有以下几点：</p>
-</blockquote>
-<ul>
-<li>完善自己的信息</li>
-<li>将自己的笔记整理到上面，便于以后管理和更新</li>
-<li>自我升华（装 13）</li>
-</ul>
-<h3 id="项目构思"><a href="#项目构思" class="headerlink" title="项目构思"></a>项目构思</h3><blockquote>
-<p>首先要想想你的博客项目想要什么样子的，不然怎么开始做呢，网上有很多，暂时没找到合乎自己审美（kou wei，又再装13），所以就想着自己设计搭建一个吧。</p>
-</blockquote>
-<ul>
-<li>不错的博客 markdown主题 - next</li>
-<li>博客需要的功能或者需求（主要看看别人的都有啥，比较好的借鉴一下下）<ul>
-<li>导航菜单（个人主页、随笔、其他）</li>
-<li>时间分类（以时间，年月日分类）</li>
-<li>文章分类（文章种类、js/css/vue/小程序/RN/计算机基础等等）</li>
-<li>联系社交（github、其他技术网站账号）</li>
-</ul>
-</li>
-</ul>
-<h3 id="使用hexo-快速搭建一个博客"><a href="#使用hexo-快速搭建一个博客" class="headerlink" title="使用hexo 快速搭建一个博客"></a>使用hexo 快速搭建一个博客</h3><ul>
-<li><p>安装hexo</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#安装hexo服务</span><br><span class="line">$ npm install -g hexo-cli</span><br><span class="line">#初始化hexo</span><br><span class="line">$ hexo init xuan-xiao-blog</span><br><span class="line">$ cd xuan-xiao-blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用Next主题</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd xuan-xiao-blog</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置</p>
-<ul>
-<li><p>修改 xuan-xiao-blog/_config.yml中的blog的主题:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 xuan-xiao-blog/themes/next/_config.yml中的scheme，我使用的是Muse。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	# Scheme Settings</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>写文章</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;my-first-article&quot;</span><br><span class="line"></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>访问<a href="http://localhost:4000，确保站点正确运行。" target="_blank" rel="noopener">http://localhost:4000，确保站点正确运行。</a></p>
-<h3 id="部署到-github"><a href="#部署到-github" class="headerlink" title="部署到 github"></a>部署到 github</h3></li>
-<li><p>首先要拥有一个 github 账号,自己google 去申请吧</p>
-</li>
-<li>然后就是新建一个仓库 名字和你的用户名保持一直，例如：<you name="">.github.io</you></li>
-<li>选择公有：public</li>
-<li>勾选readme.md</li>
-<li><p>最后点击确定生成仓库</p>
-</li>
-<li><p>修改 xuan-xiao-blog/_config.yml中的 参数:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/&lt;you name&gt;/&lt;you name&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Git包，执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>部署到GitHub上，执行以下的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后打开你的博客 http://<you name="">.github.io/ 已经可以看到刚刚新建的博文。</you></p>
-</li>
-</ul>
-<h3 id="hexo-几个常见命令"><a href="#hexo-几个常见命令" class="headerlink" title="hexo 几个常见命令"></a>hexo 几个常见命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g # 或者hexo generate</span><br><span class="line">$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看</span><br><span class="line">$ hexo generate # (hexo g) 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹</span><br><span class="line">$ hexo server # (hexo s) 启动本地web服务，用于博客的预览</span><br><span class="line">$ hexo deploy # (hexo d) 部署博客到远端服务器</span><br><span class="line">$ hexo new &quot;postName&quot; # 新建文章</span><br><span class="line">$ hexo new page &quot;pageName&quot; # 新建页面</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -555,10 +386,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -566,6 +398,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -586,8 +422,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -629,6 +474,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git的使用"><span class="nav-number">1.</span> <span class="nav-text">git的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将远程项目克隆到本地"><span class="nav-number">1.1.</span> <span class="nav-text">将远程项目克隆到本地</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git的一些基本命令的使用"><span class="nav-number">1.2.</span> <span class="nav-text">git的一些基本命令的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码回滚"><span class="nav-number">1.3.</span> <span class="nav-text">代码回滚</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建标签-tag"><span class="nav-number">1.4.</span> <span class="nav-text">创建标签 tag</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git使用分支的工作流程和规范"><span class="nav-number">1.5.</span> <span class="nav-text">git使用分支的工作流程和规范</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -762,6 +623,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
